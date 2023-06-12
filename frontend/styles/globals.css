@@ -1,0 +1,90 @@
+@import url("normalize");
+
+:root {
+  --base-strong: rgb(0 0 0 / 80%);
+  --base-weak: #FFF;
+  --faint-strong: #80858A;
+  --faint-weak: #E8E8E8;
+  --accent-strong: #44BBA8;
+  --accent-strong-up: #348376;
+  --light-red: #F8A4A4;
+  --light-yellow: #F3E7BC;
+  --light-blue: #BED9EE;
+  --light-green: #BEEEC3;
+  --font-family: "Inter", sans-serif;
+  --light-red-grad:
+    linear-gradient(
+      180deg,
+      var(--light-red) 0%,
+      rgb(248 164 164 / 0%) 100%
+    );
+  --light-blue-grad:
+    linear-gradient(
+      90deg,
+      var(--light-blue) 1%,
+      rgb(190 217 238 / 0%) 100%
+    );
+  --light-green-grad:
+    linear-gradient(
+      90deg,
+      var(--light-green) 12%,
+      var(--accent-strong) 100%,
+      rgb(68 187 168 / 0%) 100%
+    );
+}
+
+html,
+body {
+  overflow-x: hidden;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: var(--base-strong);
+  background: var(--base-weak);
+
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.rounded {
+  border-radius: 20px;
+}
+
+.extra-rounded {
+  border-radius: 40px;
+}
+
+.faint-text {
+  color: var(--faint-strong);
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 0;
+  height: 0;
+}
