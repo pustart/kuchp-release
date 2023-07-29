@@ -1,0 +1,32 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Connect to your VPS server
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.VPS_HOST }} # Set this secret in your repository settings
+        username: ${{ secrets.VPS_USERNAME }} # Set this secret in your repository settings
+        password: ${{ secrets.VPS_PASSWORD }}
+        # key: ${{ secrets.VPS_PRIVATE_KEY }} # Set this secret in your repository settings
+
+
+        # The following commands will be executed on the VPS server
+        # script: |
+        #   cd /projects/kuchp-release
+        #   git pull
+        #   docker-compose down
+        #   docker-compose up -d
+        script: |
+          whoami
+          ls -al
