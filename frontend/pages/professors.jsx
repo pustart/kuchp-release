@@ -90,7 +90,7 @@ export async function getServerSideProps() {
     });
     profs = await fetchAPI('prepodavatels', {
       fields: ['name', 'teachers_eamil', 'job', 'description', 'publications'],
-      sort: ['name:desc'],
+      sort: ['name:asc'],
       populate: ['picture'],
     });
   } catch (error) {
