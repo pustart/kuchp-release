@@ -18,7 +18,6 @@ export default function Home({ contacts, freshNew }) {
     return <Error statusCode={404} />;
   }
   const router = useRouter();
-
   const windowSize = useResponsive();
 
   return (
