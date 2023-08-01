@@ -70,12 +70,18 @@ export async function getServerSideProps() {
       fields: ["name", "type"],
       sort: ["name:asc"],
       populate: ["book"],
+      pagination: {
+        page: 1,
+        pageSize: 99999,
+      },
     });
   } catch (error) {
     return {
       notFound: true,
     };
   }
+
+  console.log(methodics)
 
   return {
     props: {
