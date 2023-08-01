@@ -219,6 +219,8 @@
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+
+    min-height: 78vh;
   }
 
   .news-button {
@@ -447,8 +449,11 @@
 @media (max-width: 1400px) and (min-width: 800px) {
   .container {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+
+    min-height: 78vh;
   }
 
   .about-block {
