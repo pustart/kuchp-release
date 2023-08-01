@@ -66,9 +66,10 @@ export async function getServerSideProps() {
       fields: ['email', 'general_number', 'dean_number', 'address'],
     });
 
-    methodics = await fetchAPI('metodichkis', {
-      fields: ['name', 'type'],
-      populate: ['book'],
+    methodics = await fetchAPI("metodichkis", {
+      fields: ["name", "type"],
+      sort: ["name:asc"],
+      populate: ["book"],
     });
   } catch (error) {
     return {
