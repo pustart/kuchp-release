@@ -24,8 +24,6 @@ function CustomFooter({ contacts }) {
           <Paragraph className={styles['footer-alter-text']}>{contacts.general_number}</Paragraph>
         </Typography>
         <Typography>
-          <Paragraph className={styles['footer-text']}>Деканат</Paragraph>
-          <Paragraph className={styles['footer-text']}>{contacts.dean_number}</Paragraph>
           <Paragraph className={styles['footer-text']}>Почта</Paragraph>
           <Paragraph className={styles['footer-text']}>{contacts.email}</Paragraph>
         </Typography>

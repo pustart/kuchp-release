@@ -81,8 +81,6 @@ export async function getServerSideProps() {
     };
   }
 
-  console.log(methodics)
-
   return {
     props: {
       contacts: contacts.data.attributes,

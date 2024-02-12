@@ -49,7 +49,7 @@ function About({
   photoWidth = windowSize.width > 600 ? 180 : 120;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <Navbar />
       <main className={styles.container}>
         <figure className={styles.picture}>
@@ -61,19 +61,18 @@ function About({
               image={about.photo}
               alt="main"
             />
-          )
-            : (
-              <CustomImage
-                style={{ borderRadius: 20 }}
-                height={250}
-                width={widthSmall}
-                image={about.photo}
-                alt="main"
-              />
-            )}
+          ) : (
+            <CustomImage
+              style={{ borderRadius: 20 }}
+              height={250}
+              width={widthSmall}
+              image={about.photo}
+              alt="main"
+            />
+          )}
         </figure>
-        <section className={styles['about-block']}>
-          <div className={styles['about-block-text']}>
+        <section className={styles["about-block"]}>
+          <div className={styles["about-block-text"]}>
             <section>
               <h1>Главное о кафедре</h1>
               <p>
@@ -83,25 +82,25 @@ function About({
               </p>
             </section>
           </div>
-          <div className={styles['about-block-card']}>
+          <div className={styles["about-block-card"]}>
             <figure>
               <NextImage
-                style={{ borderRadius: '50%' }}
+                style={{ borderRadius: "50%" }}
                 width={photoWidth}
                 height={photoWidth}
                 src={getStrapiMedia(about.director)}
                 alt="Фотография зав. кафедры"
               />
             </figure>
-            <div className={styles['about-block-card-container']}>
+            <div className={styles["about-block-card-container"]}>
               <p>{about.director_name}</p>
-              <span>Заведующий кафедры</span>
+              <span>Заведующий кафедрой, доктор физико-математических наук, профессор</span>
             </div>
           </div>
         </section>
-        <section className={styles['history-block']}>
+        <section className={styles["history-block"]}>
           <h1>История кафедры</h1>
-          <div className={styles['history-block-text']}>
+          <div className={styles["history-block-text"]}>
             <ReactMarkdown children={about.history} />
           </div>
         </section>
@@ -110,56 +109,56 @@ function About({
           <hr size="1" color="#E8E8E8" />
           <CustomCollapse
             pointedList
-            data={mathCourses.math_courses.split('\n')}
+            data={mathCourses.math_courses.split("\n")}
             header={mathCourses.title}
           />
           <hr size="1" color="#E8E8E8" />
           <CustomCollapse
             pointedList
-            data={otherCourses.other_courses.split('\n')}
+            data={otherCourses.other_courses.split("\n")}
             header={otherCourses.title}
           />
           <hr size="1" color="#E8E8E8" />
         </section>
-        <section className={styles['special-courses-title']}>
+        <section className={styles["special-courses-title"]}>
           <h1>Спецкурсы</h1>
         </section>
-        <section className={styles['special-courses']}>
-          <div className={styles['special-courses-bac']}>
-            <Card className={styles['special-courses-bac-card']}>
-              <figure className={styles['card-number']}>
+        <section className={styles["special-courses"]}>
+          <div className={styles["special-courses-bac"]}>
+            <Card className={styles["special-courses-bac-card"]}>
+              <figure className={styles["card-number"]}>
                 <Image src={number1} width={40} height={40} alt="Номер один." />
               </figure>
-              <div className={styles['card-title']}>{bacCourses.for_bachelor}</div>
-              <div className={styles['card-list']}>
-                <PointedList data={bacCourses.courses.split('\n')} />
+              <div className={styles["card-title"]}>{bacCourses.for_bachelor}</div>
+              <div className={styles["card-list"]}>
+                <PointedList data={bacCourses.courses.split("\n")} />
               </div>
             </Card>
           </div>
-          <div className={styles['special-courses-master']}>
-            <Card className={styles['special-courses-master-card']}>
-              <figure className={styles['card-number']}>
+          <div className={styles["special-courses-master"]}>
+            <Card className={styles["special-courses-master-card"]}>
+              <figure className={styles["card-number"]}>
                 <Image src={number2} width={40} height={40} alt="Номер два." />
               </figure>
-              <div className={styles['card-title']}>{masterCourses.for_masters}</div>
+              <div className={styles["card-title"]}>{masterCourses.for_masters}</div>
               <div>
-                <PointedList data={masterCourses.courses.split('\n')} />
+                <PointedList data={masterCourses.courses.split("\n")} />
               </div>
             </Card>
           </div>
-          <div className={styles['special-courses-spec']}>
-            <Card className={styles['special-courses-spec-card']}>
-              <figure className={styles['card-number']}>
+          <div className={styles["special-courses-spec"]}>
+            <Card className={styles["special-courses-spec-card"]}>
+              <figure className={styles["card-number"]}>
                 <Image src={number3} width={40} height={40} alt="Номер три." />
               </figure>
-              <div className={styles['card-title']}>{specCourses.for_specialists}</div>
+              <div className={styles["card-title"]}>{specCourses.for_specialists}</div>
               <div>
-                <PointedList data={specCourses.courses.split('\n')} />
+                <PointedList data={specCourses.courses.split("\n")} />
               </div>
             </Card>
           </div>
-          <div className={styles['special-courses-pic']}>
-            <Card className={styles['special-courses-pic-card']}>
+          <div className={styles["special-courses-pic"]}>
+            <Card className={styles["special-courses-pic-card"]}>
               <figure>
                 {windowSize.width > 600 ? (
                   <Image src={cardPic} width={350} alt="Декоративная картинка." />
