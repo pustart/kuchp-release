@@ -6,7 +6,7 @@ const nextConfig = {
   },
   images: {
     loader: 'default',
-    domains: ['localhost', 'math.vsu.ru', 'www.kuchp.ru', 'backend'],
+    domains: ['localhost', 'math.vsu.ru', 'www.kuchp.ru', 'backend', 'admin.kuchp-math.ru'],
   },
   // Разрешенные типы файлов
   async headers() {
